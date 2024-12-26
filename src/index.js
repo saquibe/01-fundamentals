@@ -3,8 +3,31 @@ import ReactDOM from "react-dom/client";
 import Test from "./Test";
 
 function Greeting() {
-  return <h2>My first component</h2>;
+  return (
+    <>
+      <Person />
+      <Message />
+    </>
+  );
 }
+
+const Person = () => {
+  return (
+    <div>
+      <h2>Mohammad Saquib</h2>
+      <p>Occupation: Developer</p>
+    </div>
+  );
+};
+
+const Message = () => {
+  return (
+    <div>
+      <h2>Message</h2>
+      <p>This is a message</p>
+    </div>
+  );
+};
 
 // const Greeting = () => {
 //   return <h4>First component</h4>;
