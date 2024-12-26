@@ -25,12 +25,7 @@ const Book = () => {
   );
 };
 
-const Image = () => (
-  <img
-    src="https://m.media-amazon.com/images/I/9101MLPcFTL._SL1500_.jpg"
-    alt="book"
-  />
-);
+const Image = () => <img src="../images/book-1.jpg" alt="book" />;
 const Title = () => <h2>Onyx Storm</h2>;
 const Author = () => <h4>Rebecca Yarros</h4>;
 
