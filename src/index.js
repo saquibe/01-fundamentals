@@ -26,8 +26,21 @@ const Book = () => {
 };
 
 const Image = () => <img src="../images/book-1.jpg" alt="book" />;
-const Title = () => <h2>Onyx Storm</h2>;
-const Author = () => <h4>Rebecca Yarros</h4>;
+const Title = () => {
+  const inlineStyle = {
+    fontSize: "1.25rem",
+    margin: "5px",
+  };
+  return (
+    <>
+      <h2 style={inlineStyle}>Onyx Storm</h2>;
+    </>
+  );
+};
+
+const Author = () => (
+  <h4 style={{ color: "#f77f00", fontSize: "1rem" }}>Rebecca Yarros</h4>
+);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
