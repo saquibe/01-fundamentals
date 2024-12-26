@@ -1,43 +1,43 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Test from "./Test";
+import "./index.css";
 
-function Greeting() {
+const BookList = () => {
   return (
-    <>
-      <Person />
-      <Message />
-    </>
-  );
-}
-
-const Person = () => {
-  return (
-    <div>
-      <h2>Mohammad Saquib</h2>
-      <p>Occupation: Developer</p>
-    </div>
+    <section className="booklist">
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+    </section>
   );
 };
 
-const Message = () => {
+const Book = () => {
   return (
-    <div>
-      <h2>Message</h2>
-      <p>This is a message</p>
-    </div>
+    <article className="book">
+      <Image />
+      <Title />
+      <Author />
+    </article>
   );
 };
 
-// const Greeting = () => {
-//   return <h4>First component</h4>;
-// }
+const Image = () => (
+  <img
+    src="https://m.media-amazon.com/images/I/9101MLPcFTL._SL1500_.jpg"
+    alt="book"
+  />
+);
+const Title = () => <h2>Onyx Storm</h2>;
+const Author = () => <h4>Rebecca Yarros</h4>;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <div>
-    <Greeting />
-    <Test />
+    <BookList />
   </div>
 );
