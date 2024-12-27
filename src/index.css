@@ -47,3 +47,15 @@ body {
   font-size: medium;
   font-size: 1rem;
 }
+.book p {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+.book button {
+  background: #f77f00;
+  color: #fff;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
