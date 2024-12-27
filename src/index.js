@@ -30,31 +30,18 @@ const BookList = () => {
 };
 
 const EventExample = () => {
-  const handleFormInput = (e) => {
-    console.log(e.target);
-    console.log(e.target.name);
-    console.log(e.target.value);
-  };
-  const handleButtonClick = (e) => {
-    alert("handle button click");
-  };
-  const handleFormSubmission = (e) => {
-    e.preventDefault();
-    console.log("form submission");
-  };
   return (
     <section>
-      <form onSubmit={handleFormSubmission}>
+      <form>
         <h2>typical form</h2>
         <input
           type="text"
           name="example"
           style={{ margin: "1rem 0" }}
-          onChange={handleFormInput}
+          onChange={(e) => console.log(e.target.value)}
         />
-        <button type="submit">submit</button>
       </form>
-      <button onClick={handleButtonClick} type="submit">
+      <button onClick={() => console.log("you clicked me")} type="button">
         click me
       </button>
     </section>
