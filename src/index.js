@@ -20,7 +20,6 @@ const books = [
 const BookList = () => {
   return (
     <section className="booklist">
-      <EventExample />
       {books.map((book) => {
         // return <Book book={book} key={book.id} />;
         return <Book {...book} key={book.id} />;
@@ -29,31 +28,16 @@ const BookList = () => {
   );
 };
 
-const EventExample = () => {
-  return (
-    <section>
-      <form>
-        <h2>typical form</h2>
-        <input
-          type="text"
-          name="example"
-          style={{ margin: "1rem 0" }}
-          onChange={(e) => console.log(e.target.value)}
-        />
-      </form>
-      <button onClick={() => console.log("you clicked me")} type="button">
-        click me
-      </button>
-    </section>
-  );
-};
-
 const Book = (props) => {
   const { title, author, img } = props;
+  const displayTitle = () => {
+    console.log(title);
+  };
   return (
     <article className="book">
       <img src={img} alt={title} />
       <h1>{title}</h1>
+      <button onClick={displayTitle}>display title</button>
       <h4>{author}</h4>
     </article>
   );
