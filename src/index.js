@@ -2,37 +2,31 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 
-const firstBook = {
-  title: "Onyx Storm",
-  author: "Rebecca Yarros",
-  img: "images/book-1.jpg",
-};
+const books = [
+  {
+    title: "Onyx Storm",
+    author: "Rebecca Yarros",
+    img: "images/book-1.jpg",
+  },
+  {
+    title: "The Let Them Theory",
+    author: " Mel Robbins",
+    img: "https://m.media-amazon.com/images/I/51wzfAWW1bL._SY445_SX342_.jpg",
+  },
+];
 
-const secondBook = {
-  title: "The Let Them Theory",
-  author: " Mel Robbins",
-  img: "https://m.media-amazon.com/images/I/51wzfAWW1bL._SY445_SX342_.jpg",
-};
+const names = ["john", "peter", "susan"];
+const newNames = names.map((name) => {
+  return <h1>{name}</h1>;
+});
 
 const BookList = () => {
+  // return <section className="booklist">{newNames}</section>;
   return (
     <section className="booklist">
-      <Book
-        author={firstBook.author}
-        title={firstBook.title}
-        img={firstBook.img}
-      >
-        <p>
-          lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
-          lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
-        </p>
-        <button>click me</button>
-      </Book>
-      <Book
-        author={secondBook.author}
-        title={secondBook.title}
-        img={secondBook.img}
-      />
+      {names.map((name) => {
+        return <h1>{name}</h1>;
+      })}
     </section>
   );
 };
