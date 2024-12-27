@@ -2,15 +2,31 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 
-const title = "Onyx Storm";
-const author = "Rebecca Yarros";
-const img = "images/book-1.jpg";
+const firstBook = {
+  title: "Onyx Storm",
+  author: "Rebecca Yarros",
+  img: "images/book-1.jpg",
+};
+
+const secondBook = {
+  title: "The Let Them Theory",
+  author: " Mel Robbins",
+  img: "https://m.media-amazon.com/images/I/51wzfAWW1bL._SY445_SX342_.jpg",
+};
 
 const BookList = () => {
   return (
     <section className="booklist">
-      <Book author={author} title={title} img={img} />
-      <Book author={author} title={title} img={img} />
+      <Book
+        author={firstBook.author}
+        title={firstBook.title}
+        img={firstBook.img}
+      />
+      <Book
+        author={secondBook.author}
+        title={secondBook.title}
+        img={secondBook.img}
+      />
     </section>
   );
 };
