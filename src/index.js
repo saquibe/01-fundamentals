@@ -2,48 +2,26 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 
+const title = "Onyx Storm";
+const author = "Rebecca Yarros";
+const img = "images/book-1.jpg";
+
 const BookList = () => {
   return (
     <section className="booklist">
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
+      <Book author={author} title={title} img={img} />
+      <Book author={author} title={title} img={img} />
     </section>
   );
 };
 
-const Book = () => {
+const Book = (props) => {
   return (
     <article className="book">
-      <Image />
-      <Title />
-      <Author />
+      <img src={props.img} alt={props.title} />
+      <h1>{props.title}</h1>
+      <h4>{props.author}</h4>
     </article>
-  );
-};
-
-const Image = () => <img src="../images/book-1.jpg" alt="book" />;
-const Title = () => {
-  const title = "Onyx Storm";
-  return (
-    <>
-      {/* <h2>Onyx Storm</h2>; */}
-      <h2>{title}</h2>;
-    </>
-  );
-};
-
-const Author = () => {
-  const author = "Rebecca Yarros";
-  return (
-    <>
-      {/* <h4>Rebecca Yarros</h4>; */}
-      <h4>{author}</h4>;{/* <p>{let x = 9}</p> */}
-      <p>{7 + 7}</p>
-    </>
   );
 };
 
