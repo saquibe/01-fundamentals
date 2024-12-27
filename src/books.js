@@ -1,14 +1,24 @@
+import img1 from "./images/img1.jpg";
+import img2 from "./images/img2.jpg";
+import img3 from "./images/img3.jpg";
+
 export const books = [
   {
     title: "Onyx Storm",
     author: "Rebecca Yarros",
-    img: "images/book-1.jpg",
+    img: img1,
     id: 1,
   },
   {
     title: "The Let Them Theory",
     author: " Mel Robbins",
-    img: "https://m.media-amazon.com/images/I/51wzfAWW1bL._SY445_SX342_.jpg",
+    img: img2,
+    id: 2,
+  },
+  {
+    title: "Mom, I Want to Hear Your Story",
+    author: "Jeffrey Mason",
+    img: img3,
     id: 2,
   },
 ];
