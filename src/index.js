@@ -15,17 +15,12 @@ const books = [
   },
 ];
 
-const names = ["john", "peter", "susan"];
-const newNames = names.map((name) => {
-  return <h1>{name}</h1>;
-});
-
 const BookList = () => {
-  // return <section className="booklist">{newNames}</section>;
   return (
     <section className="booklist">
-      {names.map((name) => {
-        return <h1>{name}</h1>;
+      {books.map((book) => {
+        const { title, author, img } = book;
+        return <Book img={img} title={title} author={author} />;
       })}
     </section>
   );
